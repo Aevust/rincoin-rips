@@ -57,9 +57,7 @@ The canonical RIPs repository and official web endpoint are declared in DNS TXT 
 | Domain | DNS query |
 |--------|-----------|
 | rincoin.org | `dig TXT rincoin.org +short`|
-| rincoin.com | `dig TXT rincoin.com +short`|
 | rips.rincoin.org | `dig TXT rips.rincoin.org +short`|
-| rips.rincoin.com | `dig TXT rips.rincoin.com +short`|
 
 Expected TXT record content:
 
