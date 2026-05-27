@@ -1,8 +1,12 @@
 # Rincoin Improvement Proposals (RIPs)
 
+[![Official Website](https://img.shields.io/badge/Official%20Site-rips.rincoin.org-blue)](https://rips.rincoin.org)
+[![License: CC0-1.0](https://img.shields.io/badge/License-CC0--1.0-lightgrey)](https://creativecommons.org/publicdomain/zero/1.0/)
+
 This repository contains the formal Rincoin Improvement Proposals (RIPs). RIPs describe consensus rules, processes, and best practices for the Rincoin protocol.
 
-The RIP process itself is defined in [RIP-0001](rip-0001/rip-0001.md).
+> **Official web interface**: https://rips.rincoin.org  
+> The RIP process itself is defined in [RIP-0001](rip-0001/rip-0001.md).
 
 ---
 
@@ -93,6 +97,8 @@ RIP-0001 (Process, foundational)
 
 The Core Strategic Authority (Core Technical Lead, Core Authority Lead, Core Research Lead, Principal Architect), version-numbering scheme (`v[GENERATION].[MAJOR].[MINOR]`), and succession procedure are defined in [RIP-0001](rip-0001/rip-0001.md). Current role assignments are maintained in [`governance/core-role.md`](governance/core-role.md).
 
+For security policy and Core Team verification, see [SECURITY.md](SECURITY.md) or visit [rips.rincoin.org](https://rips.rincoin.org).
+
 ---
 
 ## Whitepaper Reference
@@ -169,7 +175,11 @@ Reference implementations and simulation suites:
 
 ## Contributing
 
-Pull requests for new RIPs MUST follow the procedure in RIP-0001 §RIP Workflow. Submit Pre-RIP discussion to the Rincoin development forum or `#rip-drafts` Discord channel before opening a PR.
+Pull requests for new RIPs MUST follow the procedure in RIP-0001 §RIP Workflow. Submit Pre-RIP discussion to the `#rip-drafts` Discord channel before opening a PR.
+
+Official RIPs are published at **[rips.rincoin.org](https://rips.rincoin.org)**
+
+This GitHub repository is the canonical source and staging area. Unauthorized forks carry no governance authority; see [SECURITY.md](SECURITY.md) for verification.
 
 ---
 
