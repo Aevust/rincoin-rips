@@ -24,6 +24,11 @@ Sensitive information may be encrypted using the public keys listed above.
 You can import our public key directly from this repository:
 `gpg --import security/Aevust_0x8B6E3BF45C714ECA_public.asc`
 
+Or fetch it from the keyserver (no clone required):
+`gpg --keyserver hkps://keys.openpgp.org --recv-keys ED20B6354EE4526D01F83B538B6E3BF45C714ECA`
+
+Viewable at: [keys.openpgp.org/vks/v1/by-fingerprint/ED20B6354EE4526D01F83B538B6E3BF45C714ECA](https://keys.openpgp.org/vks/v1/by-fingerprint/ED20B6354EE4526D01F83B538B6E3BF45C714ECA)
+
 ---
 
 ## Verifying Official Communications
@@ -41,9 +46,9 @@ Communications from individuals not listed above, even when claiming Core Team a
 
 ## Canonical Sources
 
-- **Official RIPs**: https://rips.rincoin.org
-- **Core Repository**: https://github.com/Rin-coin/rincoin
-- **RIPs Repository**: https://github.com/Aevust/rincoin-rips
+- **Official RIPs**: [rips.rincoin.org](https://rips.rincoin.org)
+- **Core Repository**: [github.com/Rin-coin/rincoin](https://github.com/Rin-coin/rincoin)
+- **RIPs Repository (Development)**: [github.com/Aevust/rincoin-rips](https://github.com/Aevust/rincoin-rips)
 - **Governance**: [RIP-0001](https://github.com/Aevust/rincoin-rips/blob/main/rip-0001/rip-0001.md)
 
 ---
@@ -66,4 +71,3 @@ v=rincoin1; canonical-rips=https://github.com/Aevust/rincoin-rips; web=https://r
 ```
 
 **Note:** `rincoin.net` is owned by the Core Authority Team but its DNS management is currently delegated. It is not authoritative for verification purposes and MUST NOT be used to verify official Core Team communications.
-
