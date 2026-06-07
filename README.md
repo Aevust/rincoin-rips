@@ -154,14 +154,11 @@ rincoin-rips/
 ├── rip-0010/
 │   └── rip-0010.md
 ├── doc/
-│   └── assets/
-│       ├── simulation-bva-results.png
-│       ├── simulation-mimble-wimble-results.png
-│       ├── simulation-mweb-reorg-results.png
-│       └── simulation-rin3-results.png
+│   └── assets/             # DOI badges and supplementary images
 ├── governance/
-│   ├── core-role.md
-│   └── editor-changes.md
+│   ├── core-role.md          # Current Core Role assignments
+│   ├── editor-changes.md     # Role transition and removal history
+│   └── emergency-actions.md  # Record of emergency-exception commits
 └── security/
     └── *_public.asc
 ```
