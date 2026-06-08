@@ -1,0 +1,4 @@
+# rincoin-rips: enforce LF for all text files
+* text=auto eol=lf
+*.md text eol=lf
+COPYING text eol=lf
