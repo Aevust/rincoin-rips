@@ -22,7 +22,7 @@ Sensitive information may be encrypted using the public keys listed above.
 ### How to obtain our public key
 
 You can import our public key directly from this repository:
-`gpg --import security/Aevust_0x8B6E3BF45C714ECA_public.asc`
+`gpg --import security/aevust.asc`
 
 Or fetch it from the keyserver (no clone required):
 `gpg --keyserver hkps://keys.openpgp.org --recv-keys ED20B6354EE4526D01F83B538B6E3BF45C714ECA`
