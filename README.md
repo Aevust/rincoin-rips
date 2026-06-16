@@ -1,6 +1,7 @@
 # Rincoin Improvement Proposals (RIPs)
 
 [![Official Website](https://img.shields.io/badge/Official%20Site-rips.rincoin.org-blue)](https://rips.rincoin.org)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.17141922-blue)](https://doi.org/10.5281/zenodo.17141922)
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0--1.0-lightgrey)](https://creativecommons.org/publicdomain/zero/1.0/)
 
 This repository contains the formal Rincoin Improvement Proposals (RIPs). RIPs describe consensus rules, processes, and best practices for the Rincoin protocol.
@@ -35,12 +36,12 @@ RIPs activate at the following block heights (mainnet, 60 s/block):
 |--------------|--------------|-------------------|--------|-----------|
 | 0 (genesis) | 0 | RIP-0002 | ✅ Active | Embedded in chainparams from genesis (Core v1.0.6) |
 | **— (mainnet `NEVER_ACTIVE`)** | — | RIP-0004 (MWEB) | **Suspended** | Sealed via BIP9 NEVER_ACTIVE; reactivation requires successor RIP |
-| 840 (testnet/regtest) | — | RIP-0004 (MWEB) | Active on testnet/regtest | Soft-fork activation for validation purposes |
-| 840,000 | ~1.60 | RIP-0002 CH activation boundary, RIP-0009 (RIN3), RIP-0010 (Dynamic Subsidy Scaling) | ⏳ Pending | Single hard-fork flag day |
+| 840 (testnet/regtest height — not 840,000)  | — | RIP-0004 (MWEB) | Active on testnet/regtest | Soft-fork activation for validation purposes |
+| 840,000 | ~1.6 | RIP-0002 CH activation boundary, RIP-0009 (RIN3), RIP-0010 (Dynamic Subsidy Scaling) | ⏳ Pending | Single hard-fork flag day |
 | 5,250,000–6,260,000 | ~10–12 | RIP-0003 (CSV) — signaling window | ⏳ Pending | BIP9-style with objective gating, bit 1, threshold 90% |
 | 6,300,000 | ~12 | RIP-0002 terminal phase entry / RIP-0003 (if activated) | ⏳ Pending | Automatic |
 | 15,768,000 | ~30 | RIP-0007, RIP-0008 | ⏳ Pending | Time-deterministic hard fork |
-| ~233,280,000 | ~444 | RIP-0005, RIP-0006 (full activation) | ⏳ Pending | Time-deterministic hard fork at PoR |
+| ~233,280,000 | >400 | RIP-0005, RIP-0006 (full activation) | ⏳ Pending | Time-deterministic hard fork at PoR |
 
 Current chain progress: see [Rincoin Core](https://github.com/Rin-coin/rincoin) repository.
 
@@ -103,9 +104,9 @@ For security policy and Core Team verification, see [SECURITY.md](SECURITY.md) o
 
 ## Whitepaper Reference
 
-All RIPs in this repository normatively cite the Rincoin Whitepaper v1.6.3:
+All RIPs in this repository normatively cite the Rincoin Whitepaper:
 
-> Tokino, M. *On the Convergence of Regenerative Thermodynamic Security and Economic Incentives.* May 2026. DOI: [10.5281/zenodo.17141922](https://doi.org/10.5281/zenodo.17141922).
+> Tokino, M. *On the Convergence of Regenerative Thermodynamic Security and Economic Incentives.* DOI: [10.5281/zenodo.17141922](https://doi.org/10.5281/zenodo.17141922)
 
 The mapping between whitepaper sections and RIPs:
 
@@ -165,7 +166,7 @@ rincoin-rips/
 
 Reference implementations and simulation suites:
 
-- [`rincoin-sim`](https://github.com/Aevust/rincoin-sim): regtest validation harness (1/1000 scale)
+- [`rincoin-sim`](https://github.com/Aevust/rincoin-sim): regtest validation harness (1/1000 scale). Archived artifact (v1.0.7): Zenodo [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20363269-blue)](https://doi.org/10.5281/zenodo.20363269)
 - [`rincoin-regenerative-simulations`](https://github.com/Aevust/rincoin-regenerative-simulations): Monte Carlo simulation suite for whitepaper §4–§6
 
 ---
@@ -182,4 +183,4 @@ This GitHub repository is the canonical source and staging area. Unauthorized fo
 
 ## License
 
-All RIPs in this repository are licensed under [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/).
+All RIPs in this repository are licensed under [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/). Linked reference implementations carry their own licenses.
