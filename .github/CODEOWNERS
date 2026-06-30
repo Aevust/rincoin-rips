@@ -1,15 +1,19 @@
 # .github/CODEOWNERS
 #
-# All changes require review and approval from the Core Team.
-# @ysmreg (Founder / Core Technical Lead): final merge authority.
-# @Aevust (Core Authority Lead / Core Research Lead / Principal Architect
-# RIP Editor): primary reviewer.
-# Both are notified on all pull requests.
-# Merging requires @ysmreg approval in all cases.
+# Review policy for the Rincoin RIPs repository.
+#
+# @ysmreg  (Founder / Core Technical Lead)
+# @Aevust  (Core Authority Lead / Core Research Lead / Principal
+#           Architect / RIP Editor)
+#
+# Routine and operational changes require review from the RIP Editor
+# (@Aevust). Governance-critical changes additionally require review
+# from the Founder (@ysmreg) or Core Strategic Authority, per RIP-0001.
 
-*                   @ysmreg @Aevust
+# Default: routine / operational changes — RIP Editor review.
+*                   @Aevust
 
-# Governance-critical files require explicit Core Team review.
+# Governance-critical files — Founder / Core Strategic Authority review.
 governance/         @ysmreg @Aevust
 SECURITY.md         @ysmreg @Aevust
 rip-0001/           @ysmreg @Aevust
