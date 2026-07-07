@@ -17,3 +17,7 @@
 governance/         @ysmreg @Aevust
 SECURITY.md         @ysmreg @Aevust
 rip-0001/           @ysmreg @Aevust
+GOVERNANCE.md       @ysmreg @Aevust
+
+# This file's own protection.
+.github/CODEOWNERS  @ysmreg @Aevust
