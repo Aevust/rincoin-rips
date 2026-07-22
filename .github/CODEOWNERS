@@ -1,23 +1,30 @@
 # .github/CODEOWNERS
 #
-# Review policy for the Rincoin RIPs repository.
+# Review scope is derived from the ratified text and nothing else.
+#   /rip-0001/ is a ratified Process RIP; it is amended through the
+#   RIP process it defines.
+#   /GOVERNANCE.md is incorporated into RIP-0001 by reference, and
+#   §Authority and Amendment binds its amendments to the same
+#   process, submission discipline and recording requirements.
+#   No other clause imposes review on this repository:
+#   §Change Submission Discipline and Emergency Exception binds the
+#   official Rincoin Core repository, and SECURITY.md classifies
+#   this one as Development.
 #
-# @ysmreg  (Founder / Core Technical Lead)
-# @Aevust  (Core Authority Lead / Core Research Lead / Principal
-#           Architect / RIP Editor)
+# governance/ is deliberately not gated. GOVERNANCE.md obliges
+# core-role.md to be updated whenever an assignment changes, and
+# obliges both core-role.md and editor-changes.md to be written as
+# Vacancy Determination and Succession run — procedures that operate
+# when the Founder is unavailable. A file that must be written in a
+# reviewer's absence cannot require that reviewer's approval.
 #
-# Routine and operational changes require review from the RIP Editor
-# (@Aevust). Governance-critical changes additionally require review
-# from the Founder (@ysmreg) or Core Strategic Authority, per RIP-0001.
+# These files record assignments; the provisions of GOVERNANCE.md
+# create them. Review of the record is not review of the authority
+# the record reports.
+#
+# Precedence: the LAST matching pattern wins.
 
-# Default: routine / operational changes — RIP Editor review.
-*                   @Aevust
+*                @Aevust
 
-# Governance-critical files — Founder / Core Strategic Authority review.
-governance/         @ysmreg @Aevust
-SECURITY.md         @ysmreg @Aevust
-rip-0001/           @ysmreg @Aevust
-GOVERNANCE.md       @ysmreg @Aevust
-
-# This file's own protection.
-.github/CODEOWNERS  @ysmreg @Aevust
+/GOVERNANCE.md   @ysmreg @Aevust
+/rip-0001/       @ysmreg @Aevust
