@@ -1,6 +1,6 @@
 # Rincoin Core Role Assignments
 
-**Last Updated**: 2026-06-07
+**Last Updated**: 2026-07-22
 
 | Role | Current Holder |
 |------|----------------|
@@ -27,7 +27,7 @@
 
 ## Change Submission and Emergency Authority
 
-All changes to the official Rincoin Core repository enter through reviewed pull requests, including those authored by the Founder or any Core Role holder; the official repository is not a direct editing surface. A narrowly scoped emergency exception — limited to mitigating an actively exploited or imminently exploitable defect, barred from effecting any MAJOR/GENERATION increment or consensus-layer change, and subject to a mandatory pull request within 72 hours and disclosure in `governance/emergency-actions.md` — is defined in RIP-0001 §Change Submission Discipline and Emergency Exception.
+All changes to the official Rincoin Core repository enter through reviewed pull requests, including those authored by the Founder or any Core Role holder; the official repository is not a direct editing surface. A narrowly scoped emergency exception — limited to mitigating an actively exploited or imminently exploitable defect, barred from effecting any MAJOR/GENERATION increment or consensus-layer change, and subject to a mandatory pull request within 72 hours and disclosure in `governance/emergency-actions.md` — is defined in GOVERNANCE.md §Change Submission Discipline and Emergency Exception, incorporated into RIP-0001 by reference.
 
 **Emergency authority holders** (current): @ysmreg (Founder). In the Founder's absence, the available Core Role holders act unanimously.
 
