@@ -74,10 +74,13 @@ Communications from individuals not listed above, even when claiming Core Team a
 ## Canonical Sources
 
 - **Official RIPs**: [rips.rincoin.org](https://rips.rincoin.org)
-- **Core Repository**: [github.com/Rin-coin/rincoin](https://github.com/Rin-coin/rincoin)
-- **RIPs Repository (Development)**: [github.com/Aevust/rincoin-rips](https://github.com/Aevust/rincoin-rips)
+- **Core Repository (canonical)**: [github.com/Rin-coin/rincoin](https://github.com/Rin-coin/rincoin)
+- **Core Repository (development and staging)**: [github.com/rincoin-core/rincoin](https://github.com/rincoin-core/rincoin)
+- **RIPs Repository (canonical)**: [github.com/Aevust/rincoin-rips](https://github.com/Aevust/rincoin-rips)
 - **Governance framework**: [GOVERNANCE.md](https://github.com/Aevust/rincoin-rips/blob/main/GOVERNANCE.md)
 - **RIP process**: [RIP-0001](https://github.com/Aevust/rincoin-rips/blob/main/rip-0001/rip-0001.md)
+
+The staging repository carries no governance authority of its own; changes reach the canonical Core repository only as reviewed pull requests.
 
 ---
 
