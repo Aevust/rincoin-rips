@@ -45,7 +45,9 @@ RIPs activate (or are explicitly sealed) at the following block heights (mainnet
 | 15,768,000 | ~30 | RIP-0007, RIP-0008 | ⏳ Pending | Time-deterministic hard fork |
 | ~233,280,000 | >400 | RIP-0005, RIP-0006 (full activation) | ⏳ Pending | Time-deterministic hard fork at PoR |
 
-Current chain progress: see [Rincoin Core](https://github.com/Rin-coin/rincoin) repository.
+Current chain progress: see the [Rincoin Core](https://github.com/Rin-coin/rincoin) repository.
+
+Core development and staging take place in [`rincoin-core/rincoin`](https://github.com/rincoin-core/rincoin); changes reach the canonical repository above only as reviewed pull requests. Per [GOVERNANCE.md §Change Submission Discipline and Emergency Exception](GOVERNANCE.md#change-submission-discipline-and-emergency-exception), the official repository is a verified record of reviewed changes rather than a direct editing surface. The staging repository carries no governance authority of its own and is not authoritative for released Core software.
 
 Statuses are listed in the index above; each RIP's own preamble is authoritative. RIP-0002 is `Active` on the evidence that the schedule has been enforced from genesis on the Rincoin mainchain via Core v1.0.6, with the Phase 0→1, 1→2, and 2→3 boundaries validated in production.
 
