@@ -6,7 +6,7 @@
 
 This repository contains the formal Rincoin Improvement Proposals (RIPs). RIPs describe consensus rules, processes, and best practices for the Rincoin protocol.
 
-> **Official web interface**: https://rips.rincoin.org  
+> **Official web interface**: https://rips.rincoin.org
 > The RIP process itself is defined in [RIP-0001](rip-0001/rip-0001.md).
 
 ---
@@ -47,9 +47,9 @@ RIPs activate (or are explicitly sealed) at the following block heights (mainnet
 
 Current chain progress: see [Rincoin Core](https://github.com/Rin-coin/rincoin) repository.
 
-RIP-0001 is `Active` as the governing process specification. RIP-0002 (Customized Halving) is `Active`: the schedule has been enforced from genesis on the Rincoin mainchain via Core v1.0.6, with Phase 0→1 and Phase 1→2 boundaries validated in production. RIP-0003, RIP-0005 through RIP-0008, RIP-0009 through RIP-0010, and RIP-0011 are `Draft`. Reference implementations exist in [`rincoin-sim`](https://github.com/Aevust/rincoin-sim) and [Rincoin Core](https://github.com/Rin-coin/rincoin) for RIP-0002 and RIP-0004; the RIP-0011 mainnet seal is implemented in `rincoin-sim` (commit `3f3aa91`) and pending in Core v1.0.7; the reference implementation for RIP-0009 and RIP-0010 is in progress (Core v1.0.7 pre-release, definitive in v1.1.0). Reference implementations for RIP-0003 and RIP-0005 through RIP-0008 are pending.
+RIP-0001 is `Active` as the governing process specification. RIP-0002 (Customized Halving) is `Active`: the schedule has been enforced from genesis on the Rincoin mainchain via Core v1.0.6, with the Phase 0→1, 1→2, and 2→3 boundaries validated in production. RIP-0003, RIP-0005 through RIP-0008, RIP-0009 through RIP-0010, and RIP-0011 are `Draft`. Reference implementations exist in [`rincoin-sim`](https://github.com/Aevust/rincoin-sim) and [Rincoin Core](https://github.com/Rin-coin/rincoin) for RIP-0002 and RIP-0004; the RIP-0011 mainnet seal is implemented in `rincoin-sim` (commit `3f3aa91`) and pending in Core v1.1.0; the reference implementation for RIP-0009 and RIP-0010 is in progress in Core v1.1.0. Reference implementations for RIP-0003 and RIP-0005 through RIP-0008 are pending.
 
-**Note on the Block 840,000 hard fork**: RIP-0002 (CH dilation), RIP-0009 (RIN3 transaction-version replay protection), and RIP-0010 (Dynamic Subsidy Scaling implementation) are co-activated as a single, well-announced hard-fork event at Block 840,000. Consolidating these consensus changes into one flag day minimizes operational disruption for node operators and mining pools. The minimum-peer-version floor (PROTOCOL_VERSION 70018) is tracked separately as a v1.1.0 networking change activating at the same height.
+**Note on the Block 840,000 hard fork**: RIP-0002 (CH dilation), RIP-0009 (RIN3 transaction-version replay protection), and RIP-0010 (Dynamic Subsidy Scaling implementation) are co-activated as a single, well-announced hard-fork event at Block 840,000. Consolidating these consensus changes into one flag day minimizes operational disruption for node operators and mining pools. RIN3 P2P capability signaling (the PROTOCOL_VERSION bump to 70018 and the `NODE_RIN3` service bit) is tracked separately as a v1.1.0 networking change and ships with that release rather than activating at a block height. No minimum-peer-version floor is imposed: RIN3 is a soft fork, and gating peers by a self-reported version would create the very split the flag day is designed to avoid.
 
 ---
 
@@ -57,7 +57,7 @@ RIP-0001 is `Active` as the governing process specification. RIP-0002 (Customize
 
 **Note on RIP-0004 (MWEB)**: While the specification is implemented in Core v1.0.6 and validated in `rincoin-sim`, the mainnet activation has been suspended via BIP9 `NEVER_ACTIVE` per a strategic decision of the Rincoin Core Authority. The suspension is documented in §2.1 of RIP-0004. Testnet and regtest activation at block 840 remains in effect for validation purposes. Any future reactivation requires a successor RIP per the conditions outlined in RIP-0004.
 
-**Note on RIP-0011 (Taproot)**: Taproot (BIPs 340–342) is **not adopted** on Rincoin mainnet. The mainnet `DEPLOYMENT_TAPROOT` is sealed via BIP9 `NEVER_ACTIVE` / `NO_TIMEOUT`; Testnet and Regtest retain `ALWAYS_ACTIVE` to preserve upstream test vectors and keep the codepaths exercised in CI. Unlike RIP-0004 (a time-bound suspension pending wallet migration), RIP-0011 is a non-adoption decision under the current protocol family, reversible only by a successor RIP meeting the conditions in RIP-0011 §4. The mainnet seal is applied in `rincoin-sim` (commit `3f3aa91`) and pending in Core v1.0.7; a wallet-layer guard rejecting Taproot/future-witness sends on mainnet is implemented on the `rincoin-sim` v1.0.8 branch (commit `4aba34a`) and planned for v1.0.8.
+**Note on RIP-0011 (Taproot)**: Taproot (BIPs 340–342) is **not adopted** on Rincoin mainnet. The mainnet `DEPLOYMENT_TAPROOT` is sealed via BIP9 `NEVER_ACTIVE` / `NO_TIMEOUT`; Testnet and Regtest retain `ALWAYS_ACTIVE` to preserve upstream test vectors and keep the codepaths exercised in CI. Unlike RIP-0004 (a time-bound suspension pending wallet migration), RIP-0011 is a non-adoption decision under the current protocol family, reversible only by a successor RIP meeting the conditions in RIP-0011 §4. The mainnet seal is applied in `rincoin-sim` (commit `3f3aa91`) and pending in Core v1.1.0; a wallet-layer guard rejecting Taproot/future-witness sends on mainnet is implemented on the `rincoin-sim` v1.1.1 branch (commit `4aba34a`) and planned for v1.1.1.
 
 ---
 
@@ -109,7 +109,7 @@ RIP-0001 (Process, foundational)
 
 ## Core Role Governance
 
-The Core Strategic Authority (Core Technical Lead, Core Authority Lead, Core Research Lead, Principal Architect), version-numbering scheme (`v[GENERATION].[MAJOR].[MINOR]`), and succession procedure are defined in [RIP-0001](rip-0001/rip-0001.md). Current role assignments are maintained in [`governance/core-role.md`](governance/core-role.md).
+The Core Strategic Authority (Core Technical Lead, Core Authority Lead, Core Research Lead, Principal Architect), version-numbering scheme (`v[GENERATION].[MAJOR].[MINOR]`), and succession procedure are defined in [GOVERNANCE.md](GOVERNANCE.md), which is incorporated by reference into [RIP-0001](rip-0001/rip-0001.md). Current role assignments are maintained in [`governance/core-role.md`](governance/core-role.md).
 
 For security policy and Core Team verification, see [SECURITY.md](SECURITY.md) or visit [rips.rincoin.org](https://rips.rincoin.org).
 
@@ -148,6 +148,7 @@ RIP-0004 (MWEB) and RIP-0011 (Taproot non-adoption) are protocol-integration / L
 ```
 rincoin-rips/
 ├── README.md
+├── GOVERNANCE.md
 ├── SECURITY.md
 ├── rip-0001/
 │   └── rip-0001.md
@@ -178,7 +179,7 @@ rincoin-rips/
 │   ├── editor-changes.md     # Role transition and removal history
 │   └── emergency-actions.md  # Record of emergency-exception commits
 └── security/
-    └── *_public.asc
+    └── *.asc
 ```
 
 Reference implementations and simulation suites:
