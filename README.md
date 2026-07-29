@@ -171,3 +171,5 @@ Pull requests for new RIPs MUST follow the procedure in RIP-0001 §RIP Workflow.
 ## License
 
 All RIPs in this repository are licensed under [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/). Linked reference implementations carry their own licenses.
+
+The CC0 dedication covers the content of these documents. Per CC0-1.0 §4(a), trademark and patent rights are not waived. Nothing in the dedication authorizes presenting a copy as official.
