@@ -23,8 +23,8 @@ This repository contains the formal Rincoin Improvement Proposals (RIPs). RIPs d
 | [0006](rip-0006/rip-0006.md) | Cryptographic Vault and ZKP Owner Recovery | Consensus (HF) | Standards Track | Draft | RIP-0001, RIP-0005 |
 | [0007](rip-0007/rip-0007.md) | Sweeper Bounty Mechanism for Forced Extraction | Consensus (HF) | Standards Track | Draft | RIP-0001, RIP-0006 |
 | [0008](rip-0008/rip-0008.md) | Phased Legacy Address Migration Protocol | Consensus (HF) | Standards Track | Draft | RIP-0001, RIP-0006, RIP-0007 |
-| [0009](rip-0009/rip-0009.md) | RinHash Transaction Version Enforcement (RIN3) | Consensus (HF) | Standards Track | Draft | RIP-0001, RIP-0002 |
-| [0010](rip-0010/rip-0010.md) | Dynamic Subsidy Scaling | Consensus (HF) | Standards Track | Draft | RIP-0001, RIP-0002 |
+| [0009](rip-0009/rip-0009.md) | RinHash Transaction Version Enforcement (RIN3) | Consensus (HF) | Standards Track | Draft | RIP-0002 |
+| [0010](rip-0010/rip-0010.md) | Dynamic Subsidy Scaling | Consensus (HF) | Standards Track | Draft | RIP-0002 |
 | [0011](rip-0011/rip-0011.md) | Taproot Non-Adoption on Mainnet | Consensus (non-adoption, mainnet `NEVER_ACTIVE`) | Standards Track | Draft | RIP-0001 |
 
 ---
