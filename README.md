@@ -145,46 +145,7 @@ RIP-0004 (MWEB) and RIP-0011 (Taproot non-adoption) are protocol-integration / L
 
 ---
 
-## Repository Structure
-
-```
-rincoin-rips/
-├── README.md
-├── GOVERNANCE.md
-├── SECURITY.md
-├── rip-0001/
-│   └── rip-0001.md
-├── rip-0002/
-│   └── rip-0002.md
-├── rip-0003/
-│   └── rip-0003.md
-├── rip-0004/
-│   └── rip-0004.md
-├── rip-0005/
-│   └── rip-0005.md
-├── rip-0006/
-│   └── rip-0006.md
-├── rip-0007/
-│   └── rip-0007.md
-├── rip-0008/
-│   └── rip-0008.md
-├── rip-0009/
-│   └── rip-0009.md
-├── rip-0010/
-│   └── rip-0010.md
-├── rip-0011/
-│   └── rip-0011.md
-├── doc/
-│   └── assets/             # DOI badges and supplementary images
-├── governance/
-│   ├── core-role.md          # Current Core Role assignments
-│   ├── editor-changes.md     # Role transition and removal history
-│   └── emergency-actions.md  # Record of emergency-exception commits
-└── security/
-    └── *.asc
-```
-
-Reference implementations and simulation suites:
+## Reference Implementations and Simulations
 
 - [`rincoin-sim`](https://github.com/Aevust/rincoin-sim): regtest validation harness (1/1000 scale). Archived artifact (v1.0.7): Zenodo [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20363269-blue)](https://doi.org/10.5281/zenodo.20363269)
 - [`rincoin-regenerative-simulations`](https://github.com/Aevust/rincoin-regenerative-simulations): Monte Carlo simulation suite for whitepaper §4–§6
