@@ -83,7 +83,7 @@ For security policy and Core Team verification, see [SECURITY.md](SECURITY.md) o
 
 ## Whitepaper Reference
 
-All RIPs in this repository normatively cite the Rincoin Whitepaper:
+Standards Track RIPs derived from the protocol design normatively cite the Rincoin Whitepaper:
 
 > Tokino, M. *On the Convergence of Regenerative Thermodynamic Security and Economic Incentives.* DOI: [10.5281/zenodo.17141922](https://doi.org/10.5281/zenodo.17141922)
 
