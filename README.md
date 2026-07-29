@@ -152,13 +152,19 @@ RIP-0004 (MWEB) and RIP-0011 (Taproot non-adoption) are protocol-integration / L
 
 ---
 
+## Authenticity
+
+Official RIPs are published at **[rips.rincoin.org](https://rips.rincoin.org)**. This repository is the canonical source and staging area.
+
+Each RIP and [GOVERNANCE.md](GOVERNANCE.md) carries a `Canonical-URL` field in its preamble. A copy whose preamble points elsewhere, or whose preamble has been altered, is not canonical regardless of where it is hosted. Verification keys and procedure for the Core Team are maintained in [SECURITY.md](SECURITY.md).
+
+Forks and other copies of this repository or of its documents carry no authority within the RIP process, and must not be presented as the official RIP repository or as a source of official RIPs. The scope of official support and liability is defined in [GOVERNANCE.md §Boundary of Official Support and Liability](GOVERNANCE.md#boundary-of-official-support-and-liability).
+
+---
+
 ## Contributing
 
 Pull requests for new RIPs MUST follow the procedure in RIP-0001 §RIP Workflow. Submit Pre-RIP discussion to the `#rip-drafts` Discord channel before opening a PR.
-
-Official RIPs are published at **[rips.rincoin.org](https://rips.rincoin.org)**
-
-This GitHub repository is the canonical source and staging area. Unauthorized forks carry no governance authority; see [SECURITY.md](SECURITY.md) for verification.
 
 ---
 
