@@ -103,11 +103,7 @@ RIP-0001 (Process, foundational)
 
 ## Status Definitions
 
-- **Draft**: Initial state. Specification is open to revision.
-- **Proposed**: Specification frozen, reference implementation available, ready for community review.
-- **Active**: Process RIPs in effect; deployed Standards Track RIPs.
-- **Final**: Standards Track RIPs whose activation has completed.
-- **Replaced**, **Withdrawn**, **Deferred**, **Rejected**: see RIP-0001.
+RIP statuses and the criteria for advancing between them are defined in [RIP-0001](rip-0001/rip-0001.md) §RIP Status.
 
 ---
 
