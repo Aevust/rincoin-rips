@@ -115,6 +115,8 @@ RIP-0001 (Process, foundational)
 
 The Core Strategic Authority ([§Core Roles](GOVERNANCE.md#core-roles)), the version-numbering scheme ([§Version Numbering Scheme](GOVERNANCE.md#version-numbering-scheme)), and the succession procedure ([§Succession](GOVERNANCE.md#succession)) are defined in [GOVERNANCE.md](GOVERNANCE.md), which is incorporated by reference into [RIP-0001](rip-0001/rip-0001.md). Current role assignments are maintained in [`governance/core-role.md`](governance/core-role.md).
 
+Authority over consensus-layer changes is bounded by [GOVERNANCE.md §Version Authority](GOVERNANCE.md#version-authority) and [§Network Ratification of Release Candidates](GOVERNANCE.md#network-ratification-of-release-candidates).
+
 For security policy and Core Team verification, see [SECURITY.md](SECURITY.md) or visit [rips.rincoin.org](https://rips.rincoin.org).
 
 ---
