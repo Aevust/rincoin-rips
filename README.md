@@ -65,42 +65,6 @@ Reference implementations, which RIP-0001 §RIP Status makes part of the criteri
 
 ---
 
-## Dependency Graph
-
-```
-RIP-0001 (Process, foundational)
-    │
-    ├──► RIP-0002 (Customized Halving)
-    │       │
-    │       ├──► RIP-0003 (Conditional Stability Valve)
-    │       │
-    │       ├──► RIP-0009 (RIN3 Tx Version Enforcement) ◄─┐
-    │       │                                             │ related
-    │       ├──► RIP-0010 (Dynamic Subsidy Scaling) ◄─────┘
-    │       │       (RIP-0009 + RIP-0010 co-activate at Block 840,000)
-    │       │
-    │       └──► RIP-0005 (Proof of Rinne)
-    │               │
-    │               └──► RIP-0006 (Cryptographic Vault & ZKP)
-    │                       │
-    │                       ├──► RIP-0007 (Sweeper Bounty)
-    │                       │
-    │                       └──► RIP-0008 (Phased Migration) ──┐
-    │                                ▲                          │
-    │                                └──────────────────────────┘
-    │                                      (also requires RIP-0007)
-    │
-    ├──► RIP-0004 (MWEB Integration & HogEx Fix)
-    │       (independent of regenerative stack;
-    │        NEVER_ACTIVE mainnet precedent for RIP-0011)
-    │
-    └──► RIP-0011 (Taproot Non-Adoption on Mainnet)
-            (independent; reuses RIP-0004's NEVER_ACTIVE
-             mainnet-sealing pattern)
-```
-
----
-
 ## Status Definitions
 
 RIP statuses and the criteria for advancing between them are defined in [RIP-0001](rip-0001/rip-0001.md) §RIP Status.
