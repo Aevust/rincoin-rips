@@ -1,7 +1,7 @@
 # Rincoin Improvement Proposals (RIPs)
 
 [![Official Website](https://img.shields.io/badge/Official%20Site-rips.rincoin.org-blue)](https://rips.rincoin.org)
-[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.17141922-blue)](https://doi.org/10.5281/zenodo.17141922)
+[![Whitepaper DOI](https://img.shields.io/badge/Whitepaper%20DOI-10.5281%2Fzenodo.17141922-blue)](https://doi.org/10.5281/zenodo.17141922)
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0--1.0-lightgrey)](https://creativecommons.org/publicdomain/zero/1.0/)
 
 This repository contains the formal Rincoin Improvement Proposals (RIPs). RIPs describe consensus rules, processes, and best practices for the Rincoin protocol.
@@ -23,7 +23,7 @@ This repository contains the formal Rincoin Improvement Proposals (RIPs). RIPs d
 | [0006](rip-0006/rip-0006.md) | Cryptographic Vault and ZKP Owner Recovery | Consensus (HF) | Standards Track | Draft | RIP-0001, RIP-0005 |
 | [0007](rip-0007/rip-0007.md) | Sweeper Bounty Mechanism for Forced Extraction | Consensus (HF) | Standards Track | Draft | RIP-0001, RIP-0006 |
 | [0008](rip-0008/rip-0008.md) | Phased Legacy Address Migration Protocol | Consensus (HF) | Standards Track | Draft | RIP-0001, RIP-0006, RIP-0007 |
-| [0009](rip-0009/rip-0009.md) | RinHash Transaction Version Enforcement (RIN3) | Consensus (HF) | Standards Track | Draft | RIP-0002 |
+| [0009](rip-0009/rip-0009.md) | RinHash Transaction Version Enforcement (RIN3) | Consensus (SF) | Standards Track | Draft | RIP-0002 |
 | [0010](rip-0010/rip-0010.md) | Dynamic Subsidy Scaling | Consensus (HF) | Standards Track | Draft | RIP-0002 |
 | [0011](rip-0011/rip-0011.md) | Taproot Non-Adoption on Mainnet | Consensus (non-adoption, mainnet `NEVER_ACTIVE`) | Standards Track | Draft | RIP-0001 |
 
@@ -51,7 +51,7 @@ Core development and staging take place in [`rincoin-core/rincoin`](https://gith
 
 Statuses are listed in the index above; each RIP's own preamble is authoritative. RIP-0002 is `Active` on the evidence that the schedule has been enforced from genesis on the Rincoin mainchain via Core v1.0.6, with the Phase 0→1, 1→2, and 2→3 boundaries validated in production.
 
-Reference implementations, which RIP-0001 §RIP Status makes part of the criteria for `Proposed`: RIP-0002 and RIP-0004 are implemented in [`rincoin-sim`](https://github.com/Aevust/rincoin-sim) and [Rincoin Core](https://github.com/Rin-coin/rincoin); the RIP-0011 mainnet seal is implemented in `rincoin-sim` (commit `3f3aa91`) and pending in Core v1.1.0; RIP-0009 and RIP-0010 are in progress in Core v1.1.0. RIP-0003 and RIP-0005 through RIP-0008 have none yet.
+Reference implementations, which RIP-0001 §RIP Status makes part of the criteria for `Proposed`: RIP-0002 and RIP-0004 are implemented in [`rincoin-sim`](https://github.com/Aevust/rincoin-sim) and [Rincoin Core](https://github.com/Rin-coin/rincoin); the RIP-0011 mainnet seal is implemented in `rincoin-sim` (commit `3f3aa91`) and pending in Core v1.1.0; RIP-0009 is implemented in Rincoin Core [`v1.1.0-rc1`](https://github.com/Rin-coin/rincoin/releases/tag/v1.1.0-rc1) (commit `a1b12dc8c332677c1fb8b3dbf32ca91f258f6d59`); RIP-0010 is in progress in Core v1.1.0. RIP-0003 and RIP-0005 through RIP-0008 have none yet.
 
 **Note on the Block 840,000 hard fork**: RIP-0002 (CH dilation), RIP-0009 (RIN3 transaction-version replay protection), and RIP-0010 (Dynamic Subsidy Scaling implementation) are co-activated as a single, well-announced hard-fork event at Block 840,000. Consolidating these consensus changes into one flag day minimizes operational disruption for node operators and mining pools. RIN3 P2P capability signaling (the PROTOCOL_VERSION bump to 70018 and the `NODE_RIN3` service bit) is tracked separately as a v1.1.0 networking change and ships with that release rather than activating at a block height. No minimum-peer-version floor is imposed: RIN3 is a soft fork, and gating peers by a self-reported version would create the very split the flag day is designed to avoid.
 
@@ -91,19 +91,21 @@ The mapping between whitepaper sections and RIPs:
 
 | Whitepaper Section | RIP |
 |--------------------|-----|
-| §1 Introduction (Tetra-Lemma) | Motivation contexts in RIP-0002, RIP-0005 |
-| §2 Network Specifications | (informational; not RIP'd) |
-| §3 Customized Halving Mechanism | RIP-0002 (baseline), RIP-0003 (Scenario III), RIP-0009 (RIN3), RIP-0010 (Dynamic Subsidy Scaling) |
-| §4 Proof of Rinne | RIP-0005 |
-| §5 Algorithmic Governance of τ | RIP-0005 §6 (Delay Parameter Governance) |
-| §6 Adversarial Models & Asset Lifecycle | RIP-0006, RIP-0007, RIP-0008 |
-| §6.1 Type A entropic loss | (mathematical foundation; not RIP'd directly) |
-| §6.2 Type B adversarial extraction | RIP-0006 (Vault as defense), RIP-0007 (Sweeper as preemption) |
-| §6.3 Sweeper Gold Rush | RIP-0007 |
-| §6.4 Cryptographic Vault | RIP-0006 |
-| §6.4.4 Phased Migration & Temporal Smoothing | RIP-0008 |
-| §6.5 Macroeconomic equilibrium analysis | (referenced from RIP-0005, RIP-0006, RIP-0007) |
-| §6.7 Sensitivity Boundaries | (referenced; future Informational RIP candidate) |
+| Introduction (Tetra-Lemma) | Motivation contexts in RIP-0002, RIP-0005 |
+| Network Specifications | (informational; not RIP'd) |
+| Customized Halving Mechanism | RIP-0002 (baseline), RIP-0003 (Scenario III), RIP-0009 (RIN3), RIP-0010 (Dynamic Subsidy Scaling) |
+| Proof of Rinne | RIP-0005 |
+| Algorithmic Governance of τ | RIP-0005 §6 (Delay Parameter Governance) |
+| Adversarial Models & Asset Lifecycle | RIP-0006, RIP-0007, RIP-0008 |
+| Type A entropic loss | (mathematical foundation; not RIP'd directly) |
+| Type B adversarial extraction | RIP-0006 (Vault as defense), RIP-0007 (Sweeper as preemption) |
+| Sweeper Gold Rush | RIP-0007 |
+| Cryptographic Vault | RIP-0006 |
+| Phased Migration & Temporal Smoothing | RIP-0008 |
+| Macroeconomic equilibrium analysis | (referenced from RIP-0005, RIP-0006, RIP-0007) |
+| Sensitivity Boundaries | (referenced; future Informational RIP candidate) |
+
+Sections are cited by title: the whitepaper's numbering may change between revisions, its titles are stable.
 
 RIP-0004 (MWEB) and RIP-0011 (Taproot non-adoption) are protocol-integration / Layer-1-conservatism decisions not derived from the whitepaper and are intentionally absent from this mapping.
 
@@ -111,7 +113,7 @@ RIP-0004 (MWEB) and RIP-0011 (Taproot non-adoption) are protocol-integration / L
 
 ## Reference Implementations and Simulations
 
-- [`rincoin-sim`](https://github.com/Aevust/rincoin-sim): regtest validation harness (1/1000 scale). Archived artifact (v1.0.7): Zenodo [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20363269-blue)](https://doi.org/10.5281/zenodo.20363269)
+- [`rincoin-sim`](https://github.com/Aevust/rincoin-sim): regtest validation harness (1/1000 scale). Archived test evidence, all versions: Zenodo [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20363269-blue)](https://doi.org/10.5281/zenodo.20363269)
 - [`rincoin-regenerative-simulations`](https://github.com/Aevust/rincoin-regenerative-simulations): Monte Carlo simulation suite for whitepaper §4–§6
 
 ---
